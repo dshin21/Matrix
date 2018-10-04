@@ -10,18 +10,20 @@
 using namespace std;
 
 class matrix {
+
     int size;
     int *MATRIX;
+public:
 
     matrix();
 
-    matrix( int n );
+    explicit matrix( int n );
 
     matrix( int int_arr[], int size );
 
     void set_value( int r, int c, int new_val );
 
-    int get_value( int r, int c );
+    int get_value( int r, int c ) const;
 
     void clear();
 
@@ -31,7 +33,17 @@ class matrix {
 
     ostream &operator<<( ostream &os );
 
+    friend bool operator==( const matrix &lhs, const matrix &rhs );
 
+    friend bool operator!=( const matrix &lhs, const matrix &rhs );
+
+    friend bool operator<( const matrix &lhs, const matrix &rhs );
+
+    friend bool operator>( const matrix &lhs, const matrix &rhs );
+
+    friend bool operator>=( const matrix &lhs, const matrix &rhs );
+
+    friend bool operator<=( const matrix &lhs, const matrix &rhs );
 };
 
 

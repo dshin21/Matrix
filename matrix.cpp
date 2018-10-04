@@ -26,7 +26,7 @@ void matrix::set_value( int r, int c, int new_val ) {
     MATRIX[ r * size + c ] = new_val;
 }
 
-int matrix::get_value( int r, int c ) {
+int matrix::get_value( int r, int c ) const {
     return MATRIX[ r * size + c ];
 }
 
@@ -52,7 +52,36 @@ ostream &matrix::operator<<( ostream &os ) {
         os << MATRIX[ i ];
         if ( i % size == 0 ) os << "\n";
     }
-    return os;}
+    return os;
+}
 
+bool operator==( const matrix &lhs, const matrix &rhs ) {
+    if ( lhs.size != rhs.size )return false;
+    for ( int i = 0; i < lhs.size; ++i )
+        for ( int j = 0; j < lhs.size; ++j )
+            if ( lhs.get_value( i, j ) != rhs.get_value( i, j ))
+                return false;
+    return true;
+}
+
+bool operator!=( const matrix &lhs, const matrix &rhs ) {
+    return !operator==( lhs, rhs );
+}
+
+bool operator<( const matrix &lhs, const matrix &rhs ) {
+    return lhs.size < rhs.size;
+}
+
+bool operator>( const matrix &lhs, const matrix &rhs ) {
+    return lhs.size > rhs.size;
+}
+
+bool operator<=( const matrix &lhs, const matrix &rhs ) {
+    return !operator>( lhs, rhs );
+}
+
+bool operator>=( const matrix &lhs, const matrix &rhs ) {
+    return !operator<( lhs, rhs );
+}
 
 
