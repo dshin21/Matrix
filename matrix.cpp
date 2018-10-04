@@ -18,6 +18,10 @@ matrix::matrix( int *int_arr, int n ) : size{ (int) sqrt( n ) * (int) sqrt( n ) 
     if ( size != n ) std::cout << "Invalid size" << std::endl;
     else {
         MATRIX = new int[n];
-        for ( int i = 0; i < size; ++i ) MATRIX[ i ] = int_arr[i];
+        for ( int i = 0; i < size; ++i ) MATRIX[ i ] = int_arr[ i ];
     }
+}
+
+void matrix::set_value( int r, int c, int new_val ) {
+    MATRIX[ r * size + c ] = new_val;
 }
