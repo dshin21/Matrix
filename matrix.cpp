@@ -107,3 +107,13 @@ const matrix matrix::operator--( int ) {
         --MATRIX[ i ];
     return *this;
 }
+
+matrix &matrix::operator=( matrix rhs ) {
+    swap( *this, rhs );
+    return *this;
+}
+
+void swap( matrix &lhs, matrix &rhs ) {
+    std::swap( lhs.size, rhs.size );
+    std::swap( lhs.size, rhs.size );
+}

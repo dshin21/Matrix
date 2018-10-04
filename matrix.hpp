@@ -52,6 +52,10 @@ public:
     matrix &operator--();
 
     const matrix operator--( int );
+
+    matrix &operator=( matrix rhs );
+
+    friend void swap( matrix &lhs, matrix &rhs );
 };
 
 
