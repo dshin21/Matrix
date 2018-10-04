@@ -3,6 +3,8 @@
 //
 
 #include "matrix.hpp"
+#include <math.h>
+#include <iostream>
 
 matrix::matrix() : size{ 1 } {
     MATRIX[ 1 ] = 0;
@@ -10,4 +12,12 @@ matrix::matrix() : size{ 1 } {
 
 matrix::matrix( int n ) : size{ n * n } {
     for ( int i = 0; i < size; ++i ) MATRIX[ i ] = 0;
+}
+
+matrix::matrix( int *int_arr, int n ) : size{ (int) sqrt( n ) * (int) sqrt( n ) } {
+    if ( size != n ) std::cout << "Invalid size" << std::endl;
+    else {
+        MATRIX = new int[n];
+        for ( int i = 0; i < size; ++i ) MATRIX[ i ] = int_arr[i];
+    }
 }

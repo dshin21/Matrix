@@ -11,7 +11,10 @@ class matrix {
     int *MATRIX;
 
     matrix();
-    matrix(int n);
+
+    matrix( int n );
+
+    matrix( int int_arr[], int size );
 };
 
 
