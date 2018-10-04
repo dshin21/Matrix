@@ -8,9 +8,10 @@
 
 class matrix {
     int size;
+    int *MATRIX;
 
     matrix();
-    int *MATRIX;
+    matrix(int n);
 };
 
 
