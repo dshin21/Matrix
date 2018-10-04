@@ -47,5 +47,12 @@ matrix::~matrix() {
     delete[] MATRIX;
 }
 
+ostream &matrix::operator<<( ostream &os ) {
+    for ( int i = 0; i < size; ++i ) {
+        os << MATRIX[ i ];
+        if ( i % size == 0 ) os << "\n";
+    }
+    return os;}
+
 
 
