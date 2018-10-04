@@ -30,7 +30,11 @@ int matrix::get_value( int r, int c ) {
     return MATRIX[ r * size + c ];
 }
 
-
+void matrix::clear() {
+    for ( int i = 0; i < size; ++i ) {
+        MATRIX[i] = 0;
+    }
+}
 
 
 

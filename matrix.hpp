@@ -19,7 +19,8 @@ class matrix {
     void set_value(int r, int c, int new_val);
 
     int get_value(int r, int c);
-    
+
+    void clear();
 };
 
 
