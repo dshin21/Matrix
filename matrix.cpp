@@ -32,8 +32,15 @@ int matrix::get_value( int r, int c ) {
 
 void matrix::clear() {
     for ( int i = 0; i < size; ++i ) {
-        MATRIX[i] = 0;
+        MATRIX[ i ] = 0;
     }
+}
+
+matrix matrix::identity() {
+    matrix new_matrix( size );
+    for ( int i = 0; i < size; ++i )
+        new_matrix.MATRIX[ i ] = MATRIX[ i ];
+    return new_matrix;
 }
 
 

@@ -21,6 +21,8 @@ class matrix {
     int get_value(int r, int c);
 
     void clear();
+
+    matrix identity();
 };
 
 
