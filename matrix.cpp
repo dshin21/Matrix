@@ -84,4 +84,26 @@ bool operator>=( const matrix &lhs, const matrix &rhs ) {
     return !operator<( lhs, rhs );
 }
 
+matrix &matrix::operator++() {
+    for ( int i = 0; i < size; ++i )
+        MATRIX[ i ]++;
+    return *this;
+}
 
+const matrix matrix::operator++( int ) {
+    for ( int i = 0; i < size; ++i )
+        ++MATRIX[ i ];
+    return *this;
+}
+
+matrix &matrix::operator--() {
+    for ( int i = 0; i < size; ++i )
+        MATRIX[ i ]--;
+    return *this;
+}
+
+const matrix matrix::operator--( int ) {
+    for ( int i = 0; i < size; ++i )
+        --MATRIX[ i ];
+    return *this;
+}

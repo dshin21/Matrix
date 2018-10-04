@@ -44,6 +44,14 @@ public:
     friend bool operator>=( const matrix &lhs, const matrix &rhs );
 
     friend bool operator<=( const matrix &lhs, const matrix &rhs );
+
+    matrix &operator++();
+
+    const matrix operator++( int );
+
+    matrix &operator--();
+
+    const matrix operator--( int );
 };
 
 
