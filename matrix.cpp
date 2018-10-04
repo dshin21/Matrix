@@ -117,3 +117,36 @@ void swap( matrix &lhs, matrix &rhs ) {
     std::swap( lhs.size, rhs.size );
     std::swap( lhs.size, rhs.size );
 }
+
+matrix operator+( matrix lhs, const matrix &rhs ) {
+    if ( lhs.size != rhs.size ) std::cout << "Invalid" << std::endl;
+    else {
+        matrix sum_matrix( lhs.size );
+        for ( int i = 0; i < lhs.size; ++i )
+            sum_matrix.MATRIX[ i ] += lhs.MATRIX[ i ] + rhs.MATRIX[ i ];
+        return sum_matrix;
+    }
+}
+
+matrix &matrix::operator+=( const matrix &rhs ) {
+    if ( size != rhs.size ) std::cout << "Invalid" << std::endl;
+    for ( int i = 0; i < size; ++i )
+        MATRIX[ i ] += rhs.MATRIX[ i ];
+    return reinterpret_cast<matrix &>(MATRIX);
+}
+
+matrix operator-( matrix lhs, const matrix &rhs ) {
+    if ( lhs.size != rhs.size ) std::cout << "Invalid" << std::endl;
+    else {
+        matrix sum_matrix( lhs.size );
+        for ( int i = 0; i < lhs.size; ++i )
+            sum_matrix.MATRIX[ i ] -= lhs.MATRIX[ i ] + rhs.MATRIX[ i ];
+        return sum_matrix;
+    }
+}
+
+matrix &matrix::operator-=( const matrix &rhs ) {
+    if ( size != rhs.size ) std::cout << "Invalid" << std::endl;
+    for ( int i = 0; i < size; ++i )
+        MATRIX[ i ] -= rhs.MATRIX[ i ];
+    return reinterpret_cast<matrix &>(MATRIX);}
