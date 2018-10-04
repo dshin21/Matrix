@@ -25,3 +25,12 @@ matrix::matrix( int *int_arr, int n ) : size{ (int) sqrt( n ) * (int) sqrt( n ) 
 void matrix::set_value( int r, int c, int new_val ) {
     MATRIX[ r * size + c ] = new_val;
 }
+
+int matrix::get_value( int r, int c ) {
+    return MATRIX[ r * size + c ];
+}
+
+
+
+
+

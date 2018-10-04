@@ -17,6 +17,9 @@ class matrix {
     matrix( int int_arr[], int size );
 
     void set_value(int r, int c, int new_val);
+
+    int get_value(int r, int c);
+    
 };
 
 
