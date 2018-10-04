@@ -43,5 +43,9 @@ matrix matrix::identity() {
     return new_matrix;
 }
 
+matrix::~matrix() {
+    delete[] MATRIX;
+}
+
 
 

@@ -23,6 +23,8 @@ class matrix {
     void clear();
 
     matrix identity();
+
+    ~matrix();
 };
 
 
