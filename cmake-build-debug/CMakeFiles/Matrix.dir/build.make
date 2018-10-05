@@ -57,18 +57,18 @@ include CMakeFiles/Matrix.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Matrix.dir/flags.make
 
-CMakeFiles/Matrix.dir/main.cpp.o: CMakeFiles/Matrix.dir/flags.make
-CMakeFiles/Matrix.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Matrix.dir/main.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Matrix.dir/main.cpp.o -c /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/main.cpp
+CMakeFiles/Matrix.dir/Matrixtester.cpp.o: CMakeFiles/Matrix.dir/flags.make
+CMakeFiles/Matrix.dir/Matrixtester.cpp.o: ../Matrixtester.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Matrix.dir/Matrixtester.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Matrix.dir/Matrixtester.cpp.o -c /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/Matrixtester.cpp
 
-CMakeFiles/Matrix.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Matrix.dir/main.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/main.cpp > CMakeFiles/Matrix.dir/main.cpp.i
+CMakeFiles/Matrix.dir/Matrixtester.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Matrix.dir/Matrixtester.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/Matrixtester.cpp > CMakeFiles/Matrix.dir/Matrixtester.cpp.i
 
-CMakeFiles/Matrix.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Matrix.dir/main.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/main.cpp -o CMakeFiles/Matrix.dir/main.cpp.s
+CMakeFiles/Matrix.dir/Matrixtester.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Matrix.dir/Matrixtester.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/Matrixtester.cpp -o CMakeFiles/Matrix.dir/Matrixtester.cpp.s
 
 CMakeFiles/Matrix.dir/matrix.cpp.o: CMakeFiles/Matrix.dir/flags.make
 CMakeFiles/Matrix.dir/matrix.cpp.o: ../matrix.cpp
@@ -85,13 +85,13 @@ CMakeFiles/Matrix.dir/matrix.cpp.s: cmake_force
 
 # Object files for target Matrix
 Matrix_OBJECTS = \
-"CMakeFiles/Matrix.dir/main.cpp.o" \
+"CMakeFiles/Matrix.dir/Matrixtester.cpp.o" \
 "CMakeFiles/Matrix.dir/matrix.cpp.o"
 
 # External object files for target Matrix
 Matrix_EXTERNAL_OBJECTS =
 
-Matrix.exe: CMakeFiles/Matrix.dir/main.cpp.o
+Matrix.exe: CMakeFiles/Matrix.dir/Matrixtester.cpp.o
 Matrix.exe: CMakeFiles/Matrix.dir/matrix.cpp.o
 Matrix.exe: CMakeFiles/Matrix.dir/build.make
 Matrix.exe: CMakeFiles/Matrix.dir/link.txt

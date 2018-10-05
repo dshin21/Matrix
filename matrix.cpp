@@ -7,19 +7,21 @@
 #include <iostream>
 
 matrix::matrix() : size{ 1 } {
-    MATRIX[ 1 ] = 0;
+    MATRIX = new int[1];
 }
 
-matrix::matrix( int n ) : size{ n * n } {
-    for ( int i = 0; i < size; ++i ) MATRIX[ i ] = 0;
+matrix::matrix( int n ) : size{ n } {
+    MATRIX = new int[n * n];
 }
 
 matrix::matrix( int *int_arr, int n ) : size{ (int) sqrt( n ) * (int) sqrt( n ) } {
-    if ( size != n ) std::cout << "Invalid size" << std::endl;
-    else {
-        MATRIX = new int[n];
-        for ( int i = 0; i < size; ++i ) MATRIX[ i ] = int_arr[ i ];
-    }
+    size = (int) sqrt( n );
+    if ( size * size != n ) std::cout << "Invalid size";
+
+    MATRIX = new int[n];
+    for ( int i = 0; i < n; ++i )
+        MATRIX[ i ] = int_arr[ i ];
+
 }
 
 void matrix::set_value( int r, int c, int new_val ) {
@@ -31,15 +33,18 @@ int matrix::get_value( int r, int c ) const {
 }
 
 void matrix::clear() {
-    for ( int i = 0; i < size; ++i ) {
+    for ( int i = 0; i < size * size; ++i )
         MATRIX[ i ] = 0;
-    }
 }
 
 matrix matrix::identity() {
     matrix new_matrix( size );
     for ( int i = 0; i < size; ++i )
-        new_matrix.MATRIX[ i ] = MATRIX[ i ];
+        for ( int j = 0; j < size; ++j )
+            if ( i == j )
+                new_matrix.set_value( i, j, 1 );
+            else
+                new_matrix.set_value( i, j, 0 );
     return new_matrix;
 }
 
@@ -47,10 +52,12 @@ matrix::~matrix() {
     delete[] MATRIX;
 }
 
-ostream &matrix::operator<<( ostream &os ) {
-    for ( int i = 0; i < size; ++i ) {
-        os << MATRIX[ i ];
-        if ( i % size == 0 ) os << "\n";
+ostream &operator<<( ostream &os, const matrix &matrix ) {
+    for ( int i = 0; i < matrix.size; ++i ) {
+        for ( int j = 0; j < matrix.size; ++j ) {
+            os << matrix.MATRIX[ i * matrix.size + j ];
+        }
+        os << "\n";
     }
     return os;
 }
@@ -149,4 +156,6 @@ matrix &matrix::operator-=( const matrix &rhs ) {
     if ( size != rhs.size ) std::cout << "Invalid" << std::endl;
     for ( int i = 0; i < size; ++i )
         MATRIX[ i ] -= rhs.MATRIX[ i ];
-    return reinterpret_cast<matrix &>(MATRIX);}
+    return reinterpret_cast<matrix &>(MATRIX);
+}
+

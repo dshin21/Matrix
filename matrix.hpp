@@ -31,7 +31,7 @@ public:
 
     ~matrix();
 
-    ostream &operator<<( ostream &os );
+    friend ostream &operator<<( ostream &os , const matrix& matrix);
 
     friend bool operator==( const matrix &lhs, const matrix &rhs );
 

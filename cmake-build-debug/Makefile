@@ -123,32 +123,32 @@ Matrix/fast:
 	$(MAKE) -f CMakeFiles/Matrix.dir/build.make CMakeFiles/Matrix.dir/build
 .PHONY : Matrix/fast
 
-main.o: main.cpp.o
+Matrixtester.o: Matrixtester.cpp.o
 
-.PHONY : main.o
+.PHONY : Matrixtester.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Matrix.dir/build.make CMakeFiles/Matrix.dir/main.cpp.o
-.PHONY : main.cpp.o
+Matrixtester.cpp.o:
+	$(MAKE) -f CMakeFiles/Matrix.dir/build.make CMakeFiles/Matrix.dir/Matrixtester.cpp.o
+.PHONY : Matrixtester.cpp.o
 
-main.i: main.cpp.i
+Matrixtester.i: Matrixtester.cpp.i
 
-.PHONY : main.i
+.PHONY : Matrixtester.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Matrix.dir/build.make CMakeFiles/Matrix.dir/main.cpp.i
-.PHONY : main.cpp.i
+Matrixtester.cpp.i:
+	$(MAKE) -f CMakeFiles/Matrix.dir/build.make CMakeFiles/Matrix.dir/Matrixtester.cpp.i
+.PHONY : Matrixtester.cpp.i
 
-main.s: main.cpp.s
+Matrixtester.s: Matrixtester.cpp.s
 
-.PHONY : main.s
+.PHONY : Matrixtester.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Matrix.dir/build.make CMakeFiles/Matrix.dir/main.cpp.s
-.PHONY : main.cpp.s
+Matrixtester.cpp.s:
+	$(MAKE) -f CMakeFiles/Matrix.dir/build.make CMakeFiles/Matrix.dir/Matrixtester.cpp.s
+.PHONY : Matrixtester.cpp.s
 
 matrix.o: matrix.cpp.o
 
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Matrix"
 	@echo "... edit_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... Matrixtester.o"
+	@echo "... Matrixtester.i"
+	@echo "... Matrixtester.s"
 	@echo "... matrix.o"
 	@echo "... matrix.i"
 	@echo "... matrix.s"

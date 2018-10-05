@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/Matrixtester.cpp
+matrix.hpp
+/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/matrix.hpp
+iostream
+-
+
+/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/matrix.cpp
+matrix.hpp
+/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/matrix.hpp
+math.h
+-
+iostream
+-
+
+/cygdrive/d/googleDrive/DBOX/BCIT/COMP_3712/Labs/W5/Matrix/matrix.hpp
+iostream
+-
+
